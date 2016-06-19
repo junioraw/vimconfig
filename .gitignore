@@ -1,0 +1,5 @@
+# Downloaded colors, all the files were copied to the folder "colors/"
+colorschemes/
+
+# Vundle will install this on "PluginInstall"
+bundle/
