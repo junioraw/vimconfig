@@ -3,3 +3,5 @@ colorschemes/
 
 # Vundle will install this on "PluginInstall"
 bundle/
+
+.netrwhist
