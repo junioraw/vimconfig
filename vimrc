@@ -19,6 +19,9 @@ Plugin 'scrooloose/syntastic'
 " Auto closing parenthesis, brackets, etc
 Plugin 'jiangmiao/auto-pairs'
 
+" Highlighting git changes
+Plugin 'airblade/vim-gitgutter'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
