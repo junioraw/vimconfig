@@ -37,7 +37,8 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 " Color schemes
-color molokai
+color kalahari
+"color molokai
 "color badwolf
 "color xcode-default
 
