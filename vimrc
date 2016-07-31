@@ -22,6 +22,14 @@ Plugin 'jiangmiao/auto-pairs'
 " Highlighting git changes
 Plugin 'airblade/vim-gitgutter'
 
+" Mostly for clojure
+Plugin 'rainbow_parentheses.vim'
+
+" Clojure REPL
+Plugin 'tpope/vim-fireplace'
+
+Plugin 'vim-scripts/vim-auto-save'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -63,8 +71,15 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_go_checkers = ['go']
+
+" ====================================
+" Rainbow parantheses settings always on
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
