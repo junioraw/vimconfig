@@ -111,4 +111,5 @@ let g:go_fmt_fail_silently = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:ycm_autoclose_preview_window_after_insertion = 0
 
-" gruvbox background
+" colorscheme background (looks nice with gruvbox)
+set background=dark
