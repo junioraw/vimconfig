@@ -1,4 +1,4 @@
-set nocompatible              " be iMproved, required
+set nocompatible             " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
@@ -26,7 +26,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'rainbow_parentheses.vim'
 
 " Clojure REPL
-" Plugin 'tpope/vim-fireplace'
+Plugin 'tpope/vim-fireplace'
 
 " Plugin 'vim-scripts/vim-auto-save'
 
@@ -41,6 +41,8 @@ Plugin 'vim-airline/vim-airline'
 
 " airline themes
 Plugin 'vim-airline/vim-airline-themes'
+
+" gruvbox colorscheme
 Plugin 'morhetz/gruvbox'
 
 call vundle#end()            " required
@@ -104,12 +106,13 @@ set autowrite
 let g:go_fmt_command = "goimports"
 let g:go_fmt_fail_silently = 1
 
-" So airline shows everytime
-" set laststatus=2
-
 " Display buffers
 let g:airline#extensions#tabline#enabled = 1
 let g:ycm_autoclose_preview_window_after_insertion = 0
 
 " colorscheme background (looks nice with gruvbox)
-set background=dark
+set background=light
+
+" Airline
+let g:airline_powerline_fonts=1
+" set laststatus=2
