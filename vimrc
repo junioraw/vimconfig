@@ -116,3 +116,35 @@ set background=light
 " Airline
 let g:airline_powerline_fonts=1
 " set laststatus=2
+
+" remap leader to space
+let mapleader = "\<Space>"
+" save/quit with leader
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>wq :wq<CR>
+nnoremap <Leader>q :q<CR>
+
+" use buffers with leader
+nnoremap <Leader>e :e<CR>
+nnoremap <Leader>bn :bn<CR>
+nnoremap <Leader>bp :bp<CR>
+nnoremap <Leader>bd :bd<CR>
+nnoremap <Leader>j :
+
+" Key mappings for vim-go
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage)
+
+au FileType go nmap <Leader>ds <Plug>(go-def-split)
+au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+au FileType go nmap <Leader>dt <Plug>(go-def-tab)
+
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+
+au FileType go nmap <Leader>e <Plug>(go-rename)
+
+" Key mapping for vim-fireplace
+au FileType clj nmap <Leader>ev :%Eval<CR>
