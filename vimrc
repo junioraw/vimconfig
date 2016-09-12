@@ -1,3 +1,4 @@
+inoremap jk <ESC>
 set nocompatible             " be iMproved, required
 filetype off                  " required
 
@@ -11,7 +12,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Autocompletion
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 
 " Syntax Checker
 " Plugin 'scrooloose/syntastic'
@@ -26,7 +27,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'rainbow_parentheses.vim'
 
 " Clojure REPL
-Plugin 'tpope/vim-fireplace'
+" Plugin 'tpope/vim-fireplace'
 
 " Plugin 'vim-scripts/vim-auto-save'
 
@@ -45,6 +46,15 @@ Plugin 'vim-airline/vim-airline-themes'
 " gruvbox colorscheme
 Plugin 'morhetz/gruvbox'
 
+" gocode
+Plugin 'nsf/gocode', {'rtp': 'vim/'}
+
+" deoplete
+Plugin 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
+
+" deoplete-go
+Plugin 'zchee/deoplete-go', {'do': 'make'}
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -60,7 +70,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 " Color schemes
-"color kalahari
+" color kalahari
 "color molokai
 "color badwolf
 "color xcode-default
@@ -108,10 +118,10 @@ let g:go_fmt_fail_silently = 1
 
 " Display buffers
 let g:airline#extensions#tabline#enabled = 1
-let g:ycm_autoclose_preview_window_after_insertion = 0
+"let g:ycm_autoclose_preview_window_after_insertion = 0
 
 " colorscheme background (looks nice with gruvbox)
-set background=light
+set background=dark
 
 " Airline
 let g:airline_powerline_fonts=1
@@ -148,3 +158,8 @@ au FileType go nmap <Leader>e <Plug>(go-rename)
 
 " Key mapping for vim-fireplace
 au FileType clj nmap <Leader>ev :%Eval<CR>
+
+let g:deoplete#enable_at_startup = 1
+
+" deoplete go settings
+let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
