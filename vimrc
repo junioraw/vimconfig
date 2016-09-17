@@ -55,6 +55,9 @@ Plugin 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 " deoplete-go
 Plugin 'zchee/deoplete-go', {'do': 'make'}
 
+" todo.txt
+Plugin 'freitass/todo.txt-vim'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:

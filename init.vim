@@ -1,1 +1,1 @@
-/home/junioraw/.vim/vimrc
+/home/ubuntu/.vim/vimrc
