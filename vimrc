@@ -58,6 +58,13 @@ Plugin 'zchee/deoplete-go', {'do': 'make'}
 " todo.txt
 Plugin 'freitass/todo.txt-vim'
 
+" snippets
+Plugin 'Shougo/neosnippet'
+Plugin 'Shougo/neosnippet-snippets'
+
+" vim fugitive (for git)
+Plugin 'tpope/vim-fugitive'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -107,11 +114,6 @@ set incsearch
 " let g:syntastic_go_checkers = ['go']
 
 " ====================================
-" Rainbow parantheses settings always on
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
 
 " For vim go
 set autowrite
@@ -148,6 +150,7 @@ nnoremap <Leader>j :
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>tb <Plug>(go-test-compile)
 au FileType go nmap <leader>c <Plug>(go-coverage)
 
 au FileType go nmap <Leader>ds <Plug>(go-def-split)
@@ -166,3 +169,32 @@ let g:deoplete#enable_at_startup = 1
 
 " deoplete go settings
 let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
+
+" Plugin key-mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets behavior.
+"imap <expr><TAB>
+" \ pumvisible() ? "\<C-n>" :
+" \ neosnippet#expandable_or_jumpable() ?
+" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For conceal markers.
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
+
+" Rainbow parantheses settings always on
+" au VimEnter * RainbowParenthesesToggle
+" au Syntax * RainbowParenthesesLoadRound
+" au Syntax * RainbowParenthesesLoadSquare
+" au Syntax * RainbowParenthesesLoadBraces
+"
+
+" Save folding
+" autocmd BufWinLeave *.* mkview
+" autocmd BufWinEnter *.* silent loadview
