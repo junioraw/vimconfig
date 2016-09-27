@@ -21,10 +21,10 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'jiangmiao/auto-pairs'
 
 " Highlighting git changes
-Plugin 'airblade/vim-gitgutter'
+"Plugin 'airblade/vim-gitgutter'
 
 " Mostly for clojure
-Plugin 'rainbow_parentheses.vim'
+"Plugin 'rainbow_parentheses.vim'
 
 " Clojure REPL
 " Plugin 'tpope/vim-fireplace'
@@ -43,7 +43,7 @@ Plugin 'vim-airline/vim-airline'
 " airline themes
 Plugin 'vim-airline/vim-airline-themes'
 
-" gruvbox colorscheme
+"gruvbox colorscheme
 Plugin 'morhetz/gruvbox'
 
 " gocode
@@ -63,7 +63,10 @@ Plugin 'Shougo/neosnippet'
 Plugin 'Shougo/neosnippet-snippets'
 
 " vim fugitive (for git)
-Plugin 'tpope/vim-fugitive'
+"Plugin 'tpope/vim-fugitive'
+
+" clang completion
+Plugin 'zchee/deoplete-clang'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -129,7 +132,7 @@ let g:airline#extensions#tabline#enabled = 1
 set background=dark
 
 " Airline
-let g:airline_powerline_fonts=1
+"let g:airline_powerline_fonts=1
 " set laststatus=2
 
 " remap leader to space
@@ -163,7 +166,7 @@ au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
 au FileType go nmap <Leader>e <Plug>(go-rename)
 
 " Key mapping for vim-fireplace
-au FileType clj nmap <Leader>ev :%Eval<CR>
+"au FileType clj nmap <Leader>ev :%Eval<CR>
 
 let g:deoplete#enable_at_startup = 1
 
@@ -180,13 +183,13 @@ xmap <C-k>     <Plug>(neosnippet_expand_target)
 " \ pumvisible() ? "\<C-n>" :
 " \ neosnippet#expandable_or_jumpable() ?
 " \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+"smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
 " For conceal markers.
-if has('conceal')
-  set conceallevel=2 concealcursor=niv
-endif
+"if has('conceal')
+"  set conceallevel=2 concealcursor=niv
+"endif
 
 " Rainbow parantheses settings always on
 " au VimEnter * RainbowParenthesesToggle
