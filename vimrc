@@ -103,6 +103,9 @@ set cursorline
 set showcmd
 set incsearch
 
+" it's annoying
+set nohlsearch
+
 " =====================================
 " Syntastic settings
 
@@ -201,3 +204,7 @@ xmap <C-k>     <Plug>(neosnippet_expand_target)
 " Save folding
 " autocmd BufWinLeave *.* mkview
 " autocmd BufWinEnter *.* silent loadview
+
+" clang settings
+let g:deoplete#sources#clang#libclang_path = '/usr/lib/x86_64-linux-gnu/libclang-3.8.so'
+let g:deoplete#sources#clang#clang_header = '/usr/lib/clang'
