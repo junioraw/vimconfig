@@ -153,7 +153,7 @@ nnoremap <Leader>bd :bd<CR>
 nnoremap <Leader>j :
 
 " Key mappings for vim-go
-au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>r :w<CR><Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>tb <Plug>(go-test-compile)
@@ -208,3 +208,6 @@ xmap <C-k>     <Plug>(neosnippet_expand_target)
 " clang settings
 let g:deoplete#sources#clang#libclang_path = '/usr/lib/x86_64-linux-gnu/libclang-3.8.so'
 let g:deoplete#sources#clang#clang_header = '/usr/lib/clang'
+
+" Spell checking
+set spell spelllang=en_us
