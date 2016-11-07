@@ -210,4 +210,4 @@ let g:deoplete#sources#clang#libclang_path = '/usr/lib/x86_64-linux-gnu/libclang
 let g:deoplete#sources#clang#clang_header = '/usr/lib/clang'
 
 " Spell checking
-set spell spelllang=en_us
+" set spell spelllang=en_us
